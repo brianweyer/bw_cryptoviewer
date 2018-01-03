@@ -14,6 +14,11 @@
 		18B1791E1FFB43D000B5ABD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B1791C1FFB43D000B5ABD5 /* LaunchScreen.storyboard */; };
 		18B179291FFB43D000B5ABD5 /* cryptoviewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B179281FFB43D000B5ABD5 /* cryptoviewerTests.swift */; };
 		18B179341FFB43D000B5ABD5 /* cryptoviewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B179331FFB43D000B5ABD5 /* cryptoviewerUITests.swift */; };
+		18B179451FFB491900B5ABD5 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B179431FFB491900B5ABD5 /* MainTableViewCell.swift */; };
+		18B179461FFB491900B5ABD5 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B179441FFB491900B5ABD5 /* MainTableViewCell.xib */; };
+		18D18EC31FFC74A90021330E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D18EC21FFC74A90021330E /* ApiService.swift */; };
+		18D18EC61FFC74E80021330E /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D18EC51FFC74E80021330E /* ApiConfig.swift */; };
+		18D18EC91FFC77260021330E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D18EC81FFC77260021330E /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		18B1792F1FFB43D000B5ABD5 /* cryptoviewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoviewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B179331FFB43D000B5ABD5 /* cryptoviewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptoviewerUITests.swift; sourceTree = "<group>"; };
 		18B179351FFB43D000B5ABD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B179431FFB491900B5ABD5 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		18B179441FFB491900B5ABD5 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		18D18EC21FFC74A90021330E /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		18D18EC51FFC74E80021330E /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		18D18EC81FFC77260021330E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,12 @@
 		18B179121FFB43CF00B5ABD5 /* cryptoviewer */ = {
 			isa = PBXGroup;
 			children = (
+				18D18EC71FFC77100021330E /* models */,
+				18D18EC41FFC74D20021330E /* config */,
+				18D18EC01FFC747C0021330E /* services */,
+				18B179431FFB491900B5ABD5 /* MainTableViewCell.swift */,
+				18D18EC11FFC74880021330E /* utilities */,
+				18B179441FFB491900B5ABD5 /* MainTableViewCell.xib */,
 				18B179131FFB43D000B5ABD5 /* AppDelegate.swift */,
 				18B179151FFB43D000B5ABD5 /* ViewController.swift */,
 				18B179171FFB43D000B5ABD5 /* Main.storyboard */,
@@ -123,6 +139,37 @@
 				18B179351FFB43D000B5ABD5 /* Info.plist */,
 			);
 			path = cryptoviewerUITests;
+			sourceTree = "<group>";
+		};
+		18D18EC01FFC747C0021330E /* services */ = {
+			isa = PBXGroup;
+			children = (
+				18D18EC21FFC74A90021330E /* ApiService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		18D18EC11FFC74880021330E /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		18D18EC41FFC74D20021330E /* config */ = {
+			isa = PBXGroup;
+			children = (
+				18D18EC51FFC74E80021330E /* ApiConfig.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		18D18EC71FFC77100021330E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				18D18EC81FFC77260021330E /* Coin.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +281,7 @@
 			files = (
 				18B1791E1FFB43D000B5ABD5 /* LaunchScreen.storyboard in Resources */,
 				18B1791B1FFB43D000B5ABD5 /* Assets.xcassets in Resources */,
+				18B179461FFB491900B5ABD5 /* MainTableViewCell.xib in Resources */,
 				18B179191FFB43D000B5ABD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D18EC91FFC77260021330E /* Coin.swift in Sources */,
+				18D18EC61FFC74E80021330E /* ApiConfig.swift in Sources */,
 				18B179161FFB43D000B5ABD5 /* ViewController.swift in Sources */,
+				18B179451FFB491900B5ABD5 /* MainTableViewCell.swift in Sources */,
+				18D18EC31FFC74A90021330E /* ApiService.swift in Sources */,
 				18B179141FFB43D000B5ABD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

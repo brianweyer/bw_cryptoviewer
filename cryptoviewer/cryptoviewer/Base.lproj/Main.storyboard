@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainListTableView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainListTableView" id="BYZ-38-t0r" customClass="ViewController" customModule="cryptoviewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-Ph-xub">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RF5-px-Aak">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="tintColor" red="0.1718499366" green="0.66666668650000005" blue="0.18600295589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.1718499366" green="0.66666668650000005" blue="0.18600295589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="CryptoViewer" id="dWF-CE-fAz"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17184993660619971" green="0.66666668653488159" blue="0.18600295593963406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="RF5-px-Aak" secondAttribute="top" id="7me-Ot-LdH"/>
+                            <constraint firstItem="pLF-Ph-xub" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8zb-E5-gQz"/>
+                            <constraint firstItem="RF5-px-Aak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DgB-ZK-GUg"/>
+                            <constraint firstItem="RF5-px-Aak" firstAttribute="trailing" secondItem="pLF-Ph-xub" secondAttribute="trailing" id="eLd-CL-x0h"/>
+                            <constraint firstItem="RF5-px-Aak" firstAttribute="leading" secondItem="pLF-Ph-xub" secondAttribute="leading" id="qfq-f0-FLE"/>
+                            <constraint firstAttribute="trailing" secondItem="RF5-px-Aak" secondAttribute="trailing" id="uVx-ms-3Ay"/>
+                            <constraint firstItem="pLF-Ph-xub" firstAttribute="top" secondItem="RF5-px-Aak" secondAttribute="bottom" id="zCf-Lf-OYb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="HomeTableView" destination="pLF-Ph-xub" id="7cC-id-rqS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
